@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tägliche To-Do Liste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="date"></h1>
+
+        <div class="add-task">
+            <input type="text" id="new-task" placeholder="Neue Aufgabe...">
+            <button onclick="addTask()">Hinzufügen</button>
+        </div>
+
+        <ul id="todo-list">
+            <li><input type="checkbox" data-task="wasser"> Wasser trinken</li>
+            <li><input type="checkbox" data-task="sport"> 30 Minuten Sport</li>
+            <li><input type="checkbox" data-task="essen"> Gesund essen</li>
+            <li><input type="checkbox" data-task="lesen"> 15 Minuten lesen</li>
+            <li><input type="checkbox" data-task="meditation"> Meditation</li>
+        </ul>
+
+        <div id="success-message" style="display:none;">Glückwunsch, alle Ziele erreicht!</div>
+
+        <button onclick="resetList()">Neuer Tag - Zurücksetzen</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
